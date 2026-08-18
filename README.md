@@ -1,55 +1,55 @@
-# Kalkulate V2
+# Kalkulate
 
-A command-line calculator built in C++ that supports basic arithmetic operations, exponentiation, and parentheses.
+C++-kielellä toteutettu komentorivilaskin, joka tukee peruslaskutoimituksia, potensseja ja sulkeita.
 
-## Features
+## Ominaisuudet
 
-- **Basic Operations**: Addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`)
-- **Exponentiation**: Power operator (`^`)
-- **Parentheses**: Full support for nested parentheses
-- **Order of Operations**: Follows proper mathematical precedence
-  - Exponentiation first (`^`)
-  - Multiplication and division (`*`, `/`)
-  - Addition and subtraction (`+`, `-`)
-- **Debug Mode**: Optional verbose output for troubleshooting
-- **User-friendly Interface**: Clear formatting with helpful prompts and error messages
+- **Peruslaskutoimitukset**: Yhteenlasku (`+`), vähennyslasku (`-`), kertolasku (`*`), jakolasku (`/`)
+- **Potenssiin korotus**: Potenssioperaattori (`^`)
+- **Sulkeet**: Täysi tuki sisäkkäisille sulkeille
+- **Laskujärjestys**: Noudattaa oikeaa matemaattista laskujärjestystä
+  - Potenssiin korotus ensin (`^`)
+  - Kerto- ja jakolasku (`*`, `/`)
+  - Yhteen- ja vähennyslasku (`+`, `-`)
+- **Vianmääritystila (Debug Mode)**: Valinnainen yksityiskohtainen tuloste ongelmanratkaisua varten
+- **Käyttäjäystävällinen käyttöliittymä**: Selkeä muotoilu hyödyllisillä keutteilla ja virheilmoituksilla
 
-## Installation
+## Asennus
 
-### Prerequisites
+### Esivaatimukset
 
-- C++ compiler with C++23 support (g++ recommended)
-- Windows OS (build.bat is provided for Windows)
+- C++-kääntäjä C++23-tuella (g++ suositeltu)
+- Windows-käyttöjärjestelmä (build.bat toimitetaan Windowsia varten)
 
-### Build Instructions
+### Kääntöohjeet
 
-1. Clone or download the repository
-2. Navigate to the project directory
-3. Run the build script:
+1. Kloonaa tai lataa tietovarasto (repository)
+2. Siirry projektihakemistoon
+3. Suorita käännösskripti:
 
 ```bash
 build.bat
 ```
 
-Alternatively, compile manually:
+Vaihtoehtoisesti käännä koodi manuaalisesti:
 
 ```bash
 g++ -o build/Kalkulate.exe main.cpp -lstdc++exp -std=c++23
 ```
 
-## Usage
+## Käyttö
 
-### Basic Usage
+### Peruskäyttö
 
-1. Run the executable:
+1. Suorita suoritettava tiedosto:
 ```bash
 ./build/Kalkulate.exe
 ```
 
-2. Enter your mathematical expression when prompted
-3. Press Enter to see the result
+2. Syötä matemaattinen lauseke pyydettäessä
+3. Paina Enter nähdäksesi tuloksen
 
-### Example Expressions
+### Esimerkkilausekkeita
 
 ```
 (2^4)           → 16
@@ -59,42 +59,42 @@ g++ -o build/Kalkulate.exe main.cpp -lstdc++exp -std=c++23
 2^3^2           → 512
 ```
 
-### Debug Mode
+### Vianmääritystila (Debug Mode)
 
-Enable debug mode to see detailed calculation steps:
+Ota vianmääritystila käyttöön nähdäksesi yksityiskohtaiset laskentavaiheet:
 
 ```bash
 ./build/Kalkulate.exe --debug
 ```
 
-This will show:
-- Parsed numbers and operators
-- Step-by-step execution of operations
-- Parentheses processing
-- Intermediate results
+Tämä näyttää:
+- Jäsennellyt luvut ja operaattorit
+- Laskutoimitusten vaiheittaisen suorituksen
+- Sulkeiden käsittelyn
+- Välitulokset
 
-## Program Structure
+## Ohjelman rakenne
 
-- **`evaluateExpression()`**: Handles parentheses evaluation
-- **`evaluateSimple()`**: Evaluates expressions without parentheses
-- **`calculateAnswer()`**: Performs individual arithmetic operations
+- **`evaluateExpression()`**: Käsittelee sulkeiden arvioinnin
+- **`evaluateSimple()`**: Arvioi lausekkeet ilman sulkeita
+- **`calculateAnswer()`**: Suorittaa yksittäiset laskutoimitukset
 
-## Error Handling
+## Virheiden käsittely
 
-The calculator includes robust error handling for:
-- Division by zero
-- Mismatched parentheses
-- Empty expressions
-- Unknown operators
-- Invalid input formats
+Laskin sisältää kattavan virheiden käsittelyn muun muassa seuraaville tilanteille:
+- Nollalla jakaminen
+- Puuttuvat tai parittomat sulkeet
+- Tyhjät lausekkeet
+- Tuntemattomat operaattorit
+- Virheelliset syötemuodot
 
-## Author
+## Tekijä
 
 - **cha0s66** - [GitHub](https://github.com/cha0s66)
 
-## License
+## Lisenssi
 
-This project is licensed under the MIT License - see below for details:
+Tämä projekti on lisensoitu MIT-lisenssillä – katso lisätiedot alta:
 
 ```
 MIT License
@@ -120,13 +120,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-## Contributing
+## Osallistuminen (Contributing)
 
-Contributions are welcome! Feel free to:
-- Report bugs
-- Suggest new features
-- Submit pull requests
+Kontribuutiot ovat tervetulleita! Voit vapaasti:
+- Ilmoittaa virheistä
+- Ehdottaa uusia ominaisuuksia
+- Lähettää vetopyyntöjä (pull request)
 
-## Version
-
-**Kalkulate V2** - Enhanced version with improved error handling, debug mode, and proper order of operations.
+## Versiot
+**Kalkulate V4** – Paranneltu versio, jossa on parempi virheiden käsittely, vianmääritystila ja oikea laskujärjestys.

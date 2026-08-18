@@ -209,7 +209,7 @@ int main(int argc, char* argv[]) {
     std::println("═════════════════════════════════════════════════════");
     std::println("  Tekijä: cha0s66 | GitHub: cha0s66 | Lisenssi: MIT  ");
     std::println("-----------------------------------------------------");
-    std::println("                  🧮 Kalkulate V2                    ");
+    std::println("                  🧮 Kalkulate V4                    ");
     std::println("═════════════════════════════════════════════════════");
     
     if (DEBUG) {
