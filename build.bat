@@ -1,0 +1,1 @@
+g++ -o build/KalkulateV2.exe main.cpp -lstdc++exp -std=c++23
